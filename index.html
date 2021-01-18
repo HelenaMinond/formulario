@@ -12,15 +12,21 @@
 </head>
 <body>
 
-    <form class="formulario">
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="Apellidos">
-        <input type="email" placeholder="Correo">
-        <input type="text" placeholder="Usuario">
-        <input type="password" placeholder="Contraseña">
-        <input type="number" placeholder="Teléfono (911111111)">
-        <button type="button">Registrar</button>
-    </form>
+    <div class="contenedor">
+
+        <h2 class="titulo">Formulario de registro</h2>
+
+        <form class="formulario">
+            <div><input class="formulario__nombre" type="text" placeholder="Nombre"></div>
+            <div><input class="formulario__apellidos" type="text" placeholder="Apellidos"></div>
+            <div><input class="formulario__correo" type="email" placeholder="Correo"></div>
+            <div><input class="formulario__usuario" type="text" placeholder="Usuario"></div>
+            <div><input class="formulario__contraseña" type="password" placeholder="Contraseña"></div>
+            <div><input class="formulario__telefono" type="number" placeholder="Teléfono (911111111)"></div>
+            <div><button class="formulario__boton" type="button">Registrar</button></div>
+        </form>
+
+    </div>
 
     <!--JQuery 3.5.1-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
