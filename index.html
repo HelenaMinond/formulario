@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario</title>
     <!--Mi estilo-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--Google Fonts-->
@@ -17,13 +17,13 @@
         <h2 class="titulo">Formulario de registro</h2>
 
         <form class="formulario">
-            <div><input class="formulario__nombre" type="text" placeholder="Nombre"></div>
-            <div><input class="formulario__apellidos" type="text" placeholder="Apellidos"></div>
-            <div><input class="formulario__correo" type="email" placeholder="Correo"></div>
-            <div><input class="formulario__usuario" type="text" placeholder="Usuario"></div>
-            <div><input class="formulario__contraseña" type="password" placeholder="Contraseña"></div>
-            <div><input class="formulario__telefono" type="number" placeholder="Teléfono (911111111)"></div>
-            <div><button class="formulario__boton" type="button">Registrar</button></div>
+            <div><input id="nombre" class="formulario__nombre" type="text" placeholder="Nombre"></div>
+            <div><input id="apellidos" class="formulario__apellidos" type="text" placeholder="Apellidos"></div>
+            <div><input id="correo" class="formulario__correo" type="email" placeholder="Correo"></div>
+            <div><input id="usuario" class="formulario__usuario" type="text" placeholder="Usuario"></div>
+            <div><input id="contraseña" class="formulario__contraseña" type="password" placeholder="Contraseña"></div>
+            <div><input id="telefono" class="formulario__telefono" type="number" placeholder="Teléfono (911111111)"></div>
+            <div><button id="boton" class="formulario__boton" type="button" onclick="obtenerDatos()">Registrar</button></div>
         </form>
 
     </div>
