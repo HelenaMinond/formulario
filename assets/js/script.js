@@ -1,7 +1,3 @@
-//Falta validar:
-//-Formato de email
-//-Que el telefono sea un numero, aunque el type:number no deja ingresar letras ni saltarse espacios.
-
 let boton = document.getElementById("boton");
 
 boton.addEventListener("click", function() {
@@ -13,11 +9,29 @@ boton.addEventListener("click", function() {
     let contraseña = document.getElementById("contraseña").value;
     let telefono = document.getElementById("telefono").value;
 
-    if (nombre === null || apellidos === null || correo === null || usuario === null || contraseña === null || telefono === null) {
-        alert ("Ingrese todos los datos solicitados para registrarse");
+    let formatoEmail = /\w+@\w+\.+[a-z]/;
+
+    if (nombre === "" || apellidos === "" || correo === "" || usuario === "" || contraseña === "" || telefono === "") {
+        alert ("Ingrese todos los datos solicitados para registrarse.");
+        return false;
     }
 
-    else if (telefono.toString().length <= 15 || nombre.trim().length <= 30 || apellidos.trim().length <= 80 || correo.trim().length <= 100 || usuario.trim().length <= 20) {
+    else if (telefono.toString().length >= 15 || nombre.trim().length >= 30 || apellidos.trim().length >= 80 || correo.trim().length >= 100 || usuario.trim().length >= 20) {
+        alert ("Los datos ingresados no corresponden a la cantidad máxima de carácteres.");
+        return false;
+    }
+
+    else if (!formatoEmail.test(correo)) {
+        alert ("Ingresar correo válido.");
+        return false;
+    }
+    
+    else if (isNaN(telefono)) {
+        alert ("Ingresar solo números en campo Teléfono.");
+        return false;
+    }
+
+    else {
         alert ("¡Bienvenido!\nSus datos de registros son: " + "\nNombre: " + nombre + " " + apellidos + "\nUsuario: " + usuario + "\nContraseña: "+ contraseña);
     }
 })
