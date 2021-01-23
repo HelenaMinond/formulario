@@ -13,22 +13,18 @@ boton.addEventListener("click", function() {
 
     if (nombre === "" || apellidos === "" || correo === "" || usuario === "" || contraseña === "" || telefono === "") {
         alert ("Ingrese todos los datos solicitados para registrarse.");
-        return false;
     }
 
     else if (telefono.toString().length >= 15 || nombre.trim().length >= 30 || apellidos.trim().length >= 80 || correo.trim().length >= 100 || usuario.trim().length >= 20) {
         alert ("Los datos ingresados no corresponden a la cantidad máxima de carácteres.");
-        return false;
     }
 
     else if (!formatoEmail.test(correo)) {
         alert ("Ingresar correo válido.");
-        return false;
     }
     
     else if (isNaN(telefono)) {
         alert ("Ingresar solo números en campo Teléfono.");
-        return false;
     }
 
     else {
